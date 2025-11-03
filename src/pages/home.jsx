@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Cards from "../components/cards";
-import Consultapoke from "../api/pokeapi";
 import pokemones from "../assets/pokemones1.png";
 
 function Home() {

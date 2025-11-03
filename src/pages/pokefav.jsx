@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import Cards from "../components/cards";
-import Consultapoke from "../api/pokeapi";
 
 function PokeFav() {
   return (
