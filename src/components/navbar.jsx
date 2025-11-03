@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../pages/home";
 import PokeList from "../pages/pokelist";
 import PokeDetails from "../pages/pokedetails";
