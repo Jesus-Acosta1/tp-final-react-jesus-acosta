@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import PokeDetails from "../pages/pokedetails";
 import PokeFav from "../pages/pokefav";
 import Pokeball2 from "../assets/pokeball-2.png";
-import Detalle from "../assets/ver-detalles.png";
 import Favorito from "../assets/favorito.png";
-import Favorito2 from "../assets/favorito-2.png";
 
 function Cards({ url }) {
   const [data, setData] = useState(null);
