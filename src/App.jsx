@@ -1,13 +1,11 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./css/index.css";
-import Consultapoke from "./api/pokeapi";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./pages/home";
 import PokeDetails from "./pages/pokedetails";
 import PokeList from "./pages/pokelist";
-import MostrarPokemons from "./api/pokeapi";
 import PokeFav from "./pages/pokefav";
 
 function App() {

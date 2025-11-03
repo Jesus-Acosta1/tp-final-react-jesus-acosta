@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PokeDetails from "../pages/pokedetails";
+import PokeFav from "../pages/pokefav";
 import Pokeball2 from "../assets/pokeball-2.png";
+import Detalle from "../assets/ver-detalles.png";
+import Favorito from "../assets/favorito.png";
+import Favorito2 from "../assets/favorito-2.png";
 
 function Cards({ url }) {
   const [data, setData] = useState(null);
@@ -45,9 +49,9 @@ function Cards({ url }) {
     window.location.href = `/pokedetails/${data.id}`;
   };
 
-  // const onclickfav = () => {
-  //   window.location.href = `/favoritos`;
-  // };
+  const onclickfav = () => {
+    window.location.href = `/pokefav`;
+  };
 
   return (
     <div className="cardStyle card">
@@ -60,15 +64,29 @@ function Cards({ url }) {
       />
       <h3 className="name-poke">{data.name}</h3>
       <p className="id-poke">Pokedex # {data.id}</p>
-      {/* <p className="tipo">Tipo:{data.types[0].type.name}</p> */}
       <div className="card-buttons">
         <Link className="btn-det btn-act" to={`/pokedetails/${data.id}`}>
           Detalles
         </Link>
 
-        <Link className="btn-fav btn-act" to={`/pokefav`}>
+        {/* <Link className="btn-fav btn-act" to={`/pokefav`}>
           Favoritos
-        </Link>
+        </Link> */}
+        {/* <div>
+          <img
+            className="btn-det btn-act"
+            src={Detalle}
+            alt="Detalles"
+            onClick={onclick}
+          />
+        </div> */}
+
+        <img
+          className="btn-fav btn-act"
+          src={Favorito}
+          alt="Favoritos"
+          onClick={onclickfav}
+        />
       </div>
     </div>
   );
