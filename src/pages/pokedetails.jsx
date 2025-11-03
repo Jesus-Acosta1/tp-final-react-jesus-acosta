@@ -110,11 +110,10 @@ function PokeDetails() {
                     <b> {pokeDetalles.moves[5]?.move.name} </b>{" "}
                   </p>
                 </span>
-                <span>
+                {/* <span>
                   <p>{pokeDetalles.abilities[0]?.ability.name}</p>
                   <p>{pokeDetalles.abilities[1]?.ability.name}</p>
-                </span>
-                <span>{/* <p>{pokeDetalles.}</p> */}</span>
+                </span> */}
               </div>
             </div>
           </div>
