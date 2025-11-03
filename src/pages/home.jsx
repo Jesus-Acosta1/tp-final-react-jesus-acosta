@@ -8,6 +8,8 @@ function Home() {
     <div className="home">
       <h1>Bienvenido a la Pokedex</h1>
       <h2>gitpages</h2>
+      <h2>gitpages</h2>
+      <h2>gitpages</h2>
       <img className="pokemones" src={pokemones} alt="Pokemones" />
       <div className="home-text">
         <p>
