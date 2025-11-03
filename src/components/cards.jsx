@@ -42,49 +42,20 @@ function Cards({ url }) {
     data.sprites?.front_default.official_artwork ||
     `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`;
 
-  // click de la imagen para ir a detalles//
-  const onclick = () => {
-    window.location.href = `/pokedetails/${data.id}`;
-  };
-
-  const onclickfav = () => {
-    window.location.href = `/pokefav`;
-  };
-
   return (
     <div className="cardStyle card">
       <img className="pokeball" src={Pokeball2} alt="Pokeball" />
-      <img
-        className="logo img-act"
-        src={img}
-        alt={data.name}
-        onClick={onclick}
-      />
+      <Link to={`/pokedetails/${data.id}`}>
+        <img className="logo img-act" src={img} alt={data.name} />{" "}
+      </Link>
+
       <h3 className="name-poke">{data.name}</h3>
       <p className="id-poke">Pokedex # {data.id}</p>
       <div className="card-buttons">
         <Link className="btn-det btn-act" to={`/pokedetails/${data.id}`}>
           Detalles
         </Link>
-
-        {/* <Link className="btn-fav btn-act" to={`/pokefav`}>
-          Favoritos
-        </Link> */}
-        {/* <div>
-          <img
-            className="btn-det btn-act"
-            src={Detalle}
-            alt="Detalles"
-            onClick={onclick}
-          />
-        </div> */}
-
-        <img
-          className="btn-fav btn-act"
-          src={Favorito}
-          alt="Favoritos"
-          onClick={onclickfav}
-        />
+        <img className="btn-fav btn-act" src={Favorito} alt="Favoritos" />
       </div>
     </div>
   );
